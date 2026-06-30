@@ -1,0 +1,36 @@
+{
+  "connections": {
+    "dev": {
+      "host": "your-sap-host.example.com",
+      "sid": "S4D",
+      "client": "100",
+      "secure": true,
+      "auth": "basic",
+      "username": "YOUR_SAP_USER",
+      "password_env": "ABAPCTL_PASSWORD",
+      "language": "EN"
+    }
+  },
+  "defaults": {
+    "connection": "dev",
+    "workspace_dir": "abap",
+    "session_file": ".abapctl/.session.json"
+  },
+  "http": {
+    "max_retries": 3,
+    "retry_delay_ms": 1000,
+    "retry_backoff_factor": 2,
+    "circuit_breaker_threshold": 5
+  },
+  "clean_core": {
+    "atc_variant": "CLEAN_CORE",
+    "max_verdicts": 500,
+    "output_dir": "clean-core",
+    "reference_url": "https://raw.githubusercontent.com/SAP/abap-atc-cr-cv-s4hc/main/src",
+    "reference_files": [
+      "objectReleaseInfoLatest.json",
+      "objectClassifications_SAP.json",
+      "objectClassifications.json"
+    ]
+  }
+}

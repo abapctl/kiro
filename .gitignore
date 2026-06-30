@@ -1,0 +1,12 @@
+# Local credentials & session — never commit
+.abapctl.json
+.abapctl/.session.json
+.abapctl/logs/
+
+# Workflow run artifacts (generated per package)
+clean-core/
+abap/
+
+# OS / editor noise
+.DS_Store
+*.swp
